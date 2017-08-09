@@ -45,6 +45,12 @@
       		 color: #003300;
       		 padding: 2.5%;
       }
+      #demo{ display: flex;
+             flex-direction: row;
+      }
+      nav { flex: 1;  }
+      main { flex: 7; }
+      aside { flex: 2; }
       @media only screen and (max-width: 1024px) {
                   body { margin: 0; padding: 0; }
                   #wrapper { width: auto; margin: 0; }
@@ -70,7 +76,7 @@
         <h1>Casita Sedona</h1>
       </header>
 
-      <div> <!-- Beggining of flex container -->
+      <div id="demo"> <!-- Beggining of flex container, will be edited in #demo css -->
         <nav role="navigation">
           <ul>
       	     <li><a href="index.html">Home</a></li>
