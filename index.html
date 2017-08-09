@@ -51,16 +51,25 @@
       nav { flex: 1;  }
       main { flex: 7; }
       aside { flex: 2; }
-      @media only screen and (max-width: 1024px) {
-                  body { margin: 0; padding: 0; }
-                  #wrapper { width: auto; margin: 0; }
-      		    h1 { font-size: 200%; }
+      @media only screen and (max-width: 1024px) { /* Tablet screens */
+            body { margin: 0; padding: 0; }
+            #wrapper { width: auto; margin: 0; }
+      		  h1 { font-size: 200%; }
       			nav li { padding: 0 0.5em;
       				     font-size: 1.2em; 	}
+            #demo{
+              flex-direction: column;
+            }
+            nav ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+            }
 
       }
-      @media only screen and (max-width: 768px) {
-
+      @media only screen and (max-width: 768px) { /* phone screens */
+        nav {order: 1;} /* this puts the nav on the bottom, if you want ontop "-1" */
+        nav ul {flex-wrap: wrap;}
       }
       header, main, nav, footer, figure, figcaption { display: block; }
     </style>
